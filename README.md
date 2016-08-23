@@ -18,10 +18,10 @@
 $('*').css('color', 'red')
 ```
 
-`$('*')` はビットくんのツイートページを構成する全ての要素（画面上に表示される全ての部品）を指す命令です。
-`.` はドットの左側の値（レシーバーと呼ぶ）が所有するドットの右側の変数や関数（プロパティと呼ぶ）を参照するという意味になります。
-今回は、ビットくんのツイートページを構成する全ての要素が所有する`css`という関数を呼び出すということです。
-[`css`関数](http://semooh.jp/jquery/api/css/css/name%2C+value/)は、Webページを表現しているHTML文書に対して、[Cascading Style Sheets (CSS)](https://ja.wikipedia.org/wiki/Cascading_Style_Sheets) という仕様を用いて、Webページのデザインを変えることができる関数です。
+- `$('*')` はビットくんのツイートページを構成する全ての要素（画面上に表示される全ての部品）を指す命令です。
+- `.` はドットの左側の値（レシーバーと呼ぶ）が所有するドットの右側の変数や関数（プロパティと呼ぶ）を参照するという意味になります。
+- 今回は、ビットくんのツイートページを構成する全ての要素が所有する`css`という関数を呼び出すということです。
+- [`css`関数](http://semooh.jp/jquery/api/css/css/name%2C+value/)は、Webページを表現しているHTML文書に対して、[Cascading Style Sheets (CSS)](https://ja.wikipedia.org/wiki/Cascading_Style_Sheets) という仕様に則して、Webページのデザインを変える関数です。
 
 
 ### ツイートの中身の文字だけを青文字に変えるJavaScriptプログラム

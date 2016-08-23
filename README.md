@@ -12,6 +12,8 @@
 
 ## 1コマ目
 
+1コマ目の目的は、ビットくんを大きくすることで、プログラミング面白いかもと思っていただくことです。
+
 ### 全ての文字を赤文字に変えるJavaScriptプログラム
 
 ```
@@ -47,6 +49,10 @@ timer = setInterval(() => {
 
 ## 2コマ目
 
+2コマ目の目的は、命令を実行する順序がプログラム全体の意味に大きく影響することを理解していただくことです。
+また、課題を通して、ゴールとなるプログラムの実行結果を実現するために、命令の順序を考える体験をしていただきます。
+
+
 ### 先頭から2つ目のツイートを1つ目に移動するJavaScriptプログラム
 
 ```
@@ -62,4 +68,18 @@ e = $('li.stream-item').eq(1); e.parent().prepend(e)
 ```
 e = $('li.stream-item').eq(2); e.parent().prepend(e)
 
+```
+
+### 2つ目のツイートを動かしてから、3つ目のツイートを動かすJavaScriptプログラム（上記2プログラムのまとめ）
+
+```
+e = $('li.stream-item').eq(1); e.parent().prepend(e)
+e = $('li.stream-item').eq(2); e.parent().prepend(e)
+```
+
+### 3つ目のツイートを動かしてから、2つ目のツイートを動かすJavaScriptプログラム
+
+```
+e = $('li.stream-item').eq(2); e.parent().prepend(e)
+e = $('li.stream-item').eq(1); e.parent().prepend(e)
 ```

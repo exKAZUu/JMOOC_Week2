@@ -52,34 +52,115 @@ timer = setInterval(() => {
 2コマ目の目的は、命令を実行する順序がプログラム全体の意味に大きく影響することを理解していただくことです。
 また、課題を通して、ゴールとなるプログラムの実行結果を実現するために、命令の順序を考える体験をしていただきます。
 
-
-### 先頭から2つ目のツイートを1つ目に移動するJavaScriptプログラム
+### 先頭から2番目のツイートを1番目に移動するJavaScriptプログラム
 
 ```
 e = $('li.stream-item').eq(1); e.parent().prepend(e)
 ```
 
-- 2つ目のツイート以外の順序は変わりません。
-- 1つ目のツイートは押し出されて、2つ目のツイートになります。
-- そのため、2つ目のツイートと1つ目のツイートが入れ替わります。
+- 2番目のツイート以外の順序は変わりません。
+- 1番目のツイートは押し出されて、2番目のツイートになります。
+- そのため、2番目のツイートと1番目のツイートが入れ替わります。
 
-### 先頭から3つ目のツイートを1つ目に移動するJavaScriptプログラム
+### 先頭から3番目のツイートを1番目に移動するJavaScriptプログラム
 
 ```
 e = $('li.stream-item').eq(2); e.parent().prepend(e)
 
 ```
 
-### 2つ目のツイートを動かしてから、3つ目のツイートを動かすJavaScriptプログラム（上記2プログラムのまとめ）
+### 2番目のツイートを動かしてから、3番目のツイートを動かすJavaScriptプログラム（上記2プログラムのまとめ）
 
 ```
 e = $('li.stream-item').eq(1); e.parent().prepend(e)
 e = $('li.stream-item').eq(2); e.parent().prepend(e)
 ```
 
-### 3つ目のツイートを動かしてから、2つ目のツイートを動かすJavaScriptプログラム
+### 3番目のツイートを動かしてから、2番目のツイートを動かすJavaScriptプログラム
 
 ```
 e = $('li.stream-item').eq(2); e.parent().prepend(e)
 e = $('li.stream-item').eq(1); e.parent().prepend(e)
+```
+
+## 3コマ目
+
+3コマ目の目的は、ループ（繰り返し）という概念について理解していただくことです。
+
+### 1番目のツイートを赤文字に変えるJavaScriptプログラム
+
+```
+$('li.stream-item').eq(0).css('color', 'red')
+```
+
+### 2番目から5番目までのツイートを赤文字に変えるJavaScriptプログラム
+
+```
+$('li.stream-item').eq(1).css('color', 'red')
+$('li.stream-item').eq(2).css('color', 'red')
+$('li.stream-item').eq(3).css('color', 'red')
+$('li.stream-item').eq(4).css('color', 'red')
+```
+
+### ループで1番目から5番目までのツイートを赤文字に変えるJavaScriptプログラム
+
+```
+for (i = 0; i < 5; i++) {
+  $('li.stream-item').eq(i).css('color', 'red')
+}
+```
+
+### ループで2番目から4番目までのツイートを緑文字に変えるJavaScriptプログラム
+
+```
+for (i = 1; i < 4; i++) {
+  $('li.stream-item').eq(i).css('color', 'green')
+}
+```
+
+## 4コマ目
+
+4コマ目の目的は、条件分岐という概念について理解していただくことです。
+
+### 1から10番目のツイートのうち、いいねの数が0個のツイートを半透明にするJavaScriptプログラム
+
+```
+for (i = 0; i < 10; i++) {
+  e = $('li.stream-item').eq(i)
+  if (e.find('.IconTextContainer:last').text() == 0) {
+    e.css('opacity', 0.2)
+  }
+}
+```
+
+### 1から10番目のツイートのうち、ビットくんがつぶやいたツイートを赤色にそれ以外を緑色に変えるJavaScriptプログラム
+
+```
+for (i = 0; i < 10; i++) {
+  e = $('li.stream-item').eq(i)
+  if (e.find('.fullname').text().indexOf('ビット') >= 0) {
+    e.css('color', 'red')
+  } else {
+    e.css('color', 'green')
+  }
+}
+```
+
+## 5コマ目
+
+5コマ目の目的は、関数という概念について理解していただくことです。
+
+### 指定したツイートを赤文字に変える`changeColor`関数を定義するJavaScriptプログラム
+
+```
+function changeColor(n) {
+  $('li.stream-item').eq(n).css('color', 'red')
+}
+```
+
+### `changeColor`関数で1番目と3番目のツイートを赤文字に変えるJavaScriptプログラム
+
+```
+changeColor(0)
+changeColor(2)
 ```

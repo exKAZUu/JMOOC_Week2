@@ -2,19 +2,19 @@
 
 ## 1コマ目
 
-- 全ての文字を赤文字に変えるJavaScriptプログラム
+### 全ての文字を赤文字に変えるJavaScriptプログラム
 
 ```
 $('*').css('color', 'red')
 ```
 
-- ツイートの中身の文字だけを青文字に変えるJavaScriptプログラム
+### ツイートの中身の文字だけを青文字に変えるJavaScriptプログラム
 
 ```
 $('li.stream-item .js-tweet-text').css('color', 'blue')
 ```
 
-- ビットくんの画像を大きくするJavaScriptプログラム
+### ビットくんの画像を大きくするJavaScriptプログラム
 
 ```
 bitkun = $('.ProfileAvatar-image')

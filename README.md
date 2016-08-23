@@ -66,7 +66,6 @@ e = $('li.stream-item').eq(1); e.parent().prepend(e)
 
 ```
 e = $('li.stream-item').eq(2); e.parent().prepend(e)
-
 ```
 
 ### 2番目のツイートを動かしてから、3番目のツイートを動かすJavaScriptプログラム（上記2プログラムのまとめ）
@@ -133,7 +132,7 @@ for (i = 0; i < 10; i++) {
 }
 ```
 
-### 1から10番目のツイートのうち、ビットくんがつぶやいたツイートを赤色にそれ以外を緑色に変えるJavaScriptプログラム
+### 1番目から10番目のツイートのうち、ビットくんがつぶやいたツイートを赤色にそれ以外を緑色に変えるJavaScriptプログラム
 
 ```
 for (i = 0; i < 10; i++) {
@@ -163,4 +162,28 @@ function changeColor(n) {
 ```
 changeColor(0)
 changeColor(2)
+```
+
+### 指定したツイートのいいねを数える`countLike`関数を定義するJavaScriptプログラム
+
+```
+function countLike(n) {
+  return Number($('li.stream-item').eq(n).find('.IconTextContainer:last').text());
+}
+```
+
+### `countLike`関数で1番目と4番目のツイートのいいねを数えるJavaScriptプログラム
+
+```
+countLike(0)
+countLike(3)
+```
+
+### ループと`countLike`関数で1番目から10番目までのツイートのいいねの数の合計を計算するJavaScriptプログラム
+
+```
+sum = 0
+for (i = 0; i < 10; i++) {
+  sum += countLike(i)
+}
 ```

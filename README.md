@@ -83,10 +83,10 @@ e = $('li.stream-item').eq(1); e.parent().prepend(e)
 - 1番目のツイートは押し出されて、2番目のツイートになります。
 - そのため、2番目のツイートと1番目のツイートが入れ替わります。
 - `$('li.stream-item')`はビットくんのページの中からツイートリストのみを取り出す命令です。
-- `.eq(1)` はドットの左側のリストの2番目のみを取り出す命令です。
+- `.eq(1)` はドットの左側のリストの2番目のみを取り出す命令です。（[`eq`関数の詳細](http://semooh.jp/jquery/api/traversing/eq/index/)）
 - `e = $('li.stream-item').eq(1)`は変数`e`にツイートリストの2番目のツイートを代入しています。
-- `e.parent()`は2番目のツイートの親、つまり、ツイートリスト全体を取得する命令です。
-- `e.parent().prepend(e)`はツイートリスト全体の最初に、2番目のツイートを移動させる命令です。
+- `e.parent()`は2番目のツイートの親、つまり、ツイートリスト全体を取得する命令です。（[`parent関数の詳細`](httphttp://semooh.jp/jquery/api/traversing/parent/%5Bexpr%5D/)）
+- `e.parent().prepend(e)`はツイートリスト全体の最初に、2番目のツイートを移動させる命令です。（[`prepend関数の詳細`](http://semooh.jp/jquery/api/manipulation/prepend/content/)）
 
 ### 先頭から3番目のツイートを1番目に移動するJavaScriptプログラム
 
